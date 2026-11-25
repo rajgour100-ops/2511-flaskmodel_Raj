@@ -1,0 +1,26 @@
+[project]
+name = "2511-model-deployment"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Rajkumar Gour", email = "rajgour100@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "flask>=3.1.3",
+    "gunicorn>=27.0.1",
+    "joblib>=1.6.0",
+    "pandas>=3.1.1",
+    "scikit-learn>=1.9.1",
+]
+
+[project.scripts]
+2511-model-deployment = "_2511_model_deployment:main"
+
+[tool.uv.build-backend]
+module-name = "_2511_model_deployment"
+
+[build-system]
+requires = ["uv_build>=0.13.7,<0.14.0"]
+build-backend = "uv_build"

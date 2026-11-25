@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>House Price Predictor</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>House Price Predictor</h1>
+
+    <p>Enter your property details below</p>
+
+    <form action="/predict" method="POST">
+
+        <label>Area (sq. ft.)</label>
+        <input type="number" name="area"
+               min="500" max="4000" required>
+
+        <label>Bedrooms</label>
+        <input type="number" name="bedrooms"
+               min="1" max="5" required>
+
+        <label>Bathrooms</label>
+        <input type="number" name="bathrooms"
+               min="1" max="4" required>
+
+        <label>Property Age</label>
+        <input type="number" name="age"
+               min="0" max="40" required>
+
+        <button type="submit">Predict House Price</button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
